@@ -1,2 +1,2 @@
 # An-expense-tracker
-A tool to track the expeses o a company
+A tool to track the expenses of a company
