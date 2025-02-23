@@ -96,7 +96,7 @@ th {
 input, select, button {
     margin: 10px 0;
     padding: 8px;
-    width: 100%;
+    width: 90%; /* 90% width for all input fields*/
 }
 
 button {
