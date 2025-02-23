@@ -3,18 +3,21 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    height: 100vh;
     background: #f4f4f4;
 }
 
 .container {
     background: white;
     padding: 20px;
-    margin-top: 20px;
-    width: 60%;
+    width: 40%;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -24,7 +27,7 @@ h2 {
 .summary {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .green {
@@ -37,10 +40,27 @@ h2 {
     font-size: 20px;
 }
 
+/* Flex container for bottom sections */
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+/* Expense Table Styling */
+.expenses-section {
+    width: 48%;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-right:10px;
 }
 
 table, th, td {
@@ -57,15 +77,19 @@ th {
     color: white;
 }
 
+/* Add Expense Section */
 .add-expense {
-    background: #eee;
-    padding: 15px;
-    border-radius: 5px;
+    width: 48%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 15px;
 }
 
 input, select, button {
     margin: 10px 0;
-    padding: 8px;
+    padding: 7px;
     width: 90%;
 }
 
