@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <div class="container">
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
         <h2>✔ Balance: <span id="balance">2000</span></h2>
         <div class="summary">
             <div class="income">
@@ -19,37 +28,42 @@
                 <p class="red">23000</p>
             </div>
         </div>
-         <h3>Expenses</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th>Type</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Income</td>
-                    <td>25000</td>
-                    <td>✔</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Rent</td>
-                    <td>18000</td>
-                    <td>❌</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Food</td>
-                    <td>5000</td>
-                    <td>❌</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-            </tbody>
-        </table>
+    </div>
+
+    <div class="bottom-container">
+        <div class="expenses-section">
+            <h3>Expenses</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Income</td>
+                        <td>25000</td>
+                        <td>✔</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Rent</td>
+                        <td>18000</td>
+                        <td>❌</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Food</td>
+                        <td>5000</td>
+                        <td>❌</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <div class="add-expense">
             <h3>Add New</h3>
@@ -64,7 +78,10 @@
             <button>Add Expense</button>
         </div>
     </div>
-    
+</body>
+</html>
+
+   
 
    <script src="index.js"></script> 
 </body>
