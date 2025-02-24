@@ -1,6 +1,9 @@
 const entryType = document.getElementById("entryType");
 const name = document.getElementById("name");
 const amount = document.getElementById("amount");
+const totalIncome = document.getElementById("totalIncome");
+const totalExpense = document.getElementById("totalExpense");
+const balance = document.getElementById("balance");
 let counter = 1;
 
 function addRow() {
@@ -22,6 +25,19 @@ function addRow() {
   amountCell.textContent = amount.value;
   typeCell.textContent = entryType.value;
 
+  //calculate total income and total expense
+  if (entryType.value === "↘") {
+    totalIncome.textContent =
+      Number(totalIncome.textContent) + Number(amount.value);
+  } else if (entryType.value === "↗") {
+    totalExpense.textContent =
+      Number(totalExpense.textContent) + Number(amount.value);
+  }
+
+  // Calculate and update the balance
+  balance.textContent =
+    Number(totalIncome.textContent) - Number(totalExpense.textContent);
+
   //create a delete button
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "❌";
@@ -31,7 +47,6 @@ function addRow() {
 
   deleteBtn.onclick = function () {
     newRow.remove();
-    numberCell.textContent = counter--;
   };
 
   deleteCell.appendChild(deleteBtn);
