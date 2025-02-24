@@ -1,88 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>An expense tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h2>✔ Balance: <span id="balance">2000</span></h2>
-        <div class="summary">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Expense Tracker</title>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <div class="container">
+          <h2>✔ Balance: <span id="balance">2000</span></h2>
+          <div class="summary">
             <div class="income">
-                <h3>Total Income</h3>
-                <p class="green">25000</p>
+              <h3>Total Income</h3>
+              <p class="green">25000</p>
             </div>
             <div class="expenses">
-                <h3>Total Expenses</h3>
-                <p class="red">23000</p>
+              <h3>Total Expenses</h3>
+              <p class="red">23000</p>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="bottom-container">
-        <div class="expenses-section">
+        <div class="bottom-container">
+          <div class="expenses-section">
             <h3>Expenses</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Amount</th>
-                        <th>Type</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Income</td>
-                        <td>25000</td>
-                        <td>✔</td>
-                        <td><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td>Rent</td>
-                        <td>18000</td>
-                        <td>❌</td>
-                        <td><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td>Food</td>
-                        <td>5000</td>
-                        <td>❌</td>
-                        <td><input type="checkbox"></td>
-                    </tr>
-                </tbody>
+            <table id="table">
+              <thead>
+                <tr>
+                  <th>S.no.</th>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th>Type</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--we only need a thead. we will add the tbody using javascript-->
+              </tbody>
             </table>
-        </div>
+          </div>
 
-        <div class="add-expense">
+          <div class="add-expense">
             <h3>Add New</h3>
-            <label>Entry Type: 
-                <select>
-                    <option>Expense</option>
-                    <option>Income</option>
-                </select>
+            <label
+              >Entry Type:
+              <select id="entryType">
+                <option value="↗">Expense</option>
+                <!--top arrow means the money we spend-->
+                <option value="↘">Income</option>
+                <!--down arrow means the money we earn-->
+              </select>
             </label>
-            <label>Name: <input type="text" placeholder="Enter name"></label>
-            <label>Amount: <input type="number" value="0"></label>
-            <button>Add Expense</button>
+            <label>Name: </label>
+            <input type="text" id="name" placeholder="Enter name" />
+            <label>Amount: </label>
+            <input type="number" id="amount" placeholder="Enter amount" />
+            <!--If you click on the button it will create a row with the input you've entered -->
+            <button onclick="addRow()">Add Expense</button>
+          </div>
         </div>
-    </div>
-</body>
-</html>
+        <script src="index.js"></script>
+      </body>
+    </html>
 
-   
-
-   <script src="index.js"></script> 
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
