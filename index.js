@@ -31,6 +31,8 @@ function addRow() {
 
   deleteBtn.onclick = function () {
     newRow.remove();
+    numberCell.textContent = counter--;
   };
+
   deleteCell.appendChild(deleteBtn);
 }
