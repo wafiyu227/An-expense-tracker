@@ -4,23 +4,23 @@ const amount = document.getElementById("amount");
 const totalIncome = document.getElementById("totalIncome");
 const totalExpense = document.getElementById("totalExpense");
 const balance = document.getElementById("balance");
-let counter = 1;
 
-function addRow() {
+
+function addRow(i) {
   let table = document.getElementById("table").getElementsByTagName("tbody")[0];
 
   // Create a new row
-  let newRow = table.insertRow();
+  let newRow = table.insertRow(i);
 
   // Insert new cells
-  let numberCell = newRow.insertCell(0);
+  let dateCell = newRow.insertCell(0);
   let nameCell = newRow.insertCell(1);
   let amountCell = newRow.insertCell(2);
   let typeCell = newRow.insertCell(3);
   let deleteCell = newRow.insertCell(4);
 
   // Add text to cells
-  numberCell.textContent = counter++;
+  dateCell.textContent = new Date().getMonth() + `/` + new Date().getDate() + `/`+ new Date().getFullYear();
   nameCell.textContent = name.value;
   amountCell.textContent = amount.value;
   typeCell.textContent = entryType.value;
@@ -46,7 +46,7 @@ function addRow() {
   deleteBtn.style.border = "none";
 
   deleteBtn.onclick = function () {
-    newRow.remove();
+    newRow.remove(i);
   };
 
   deleteCell.appendChild(deleteBtn);
